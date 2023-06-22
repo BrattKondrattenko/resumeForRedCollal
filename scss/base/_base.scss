@@ -1,0 +1,78 @@
+@import "./reset";
+@import "./fonts";
+@import "./vars";
+
+::selection {
+    background-color: $accent;
+}
+
+body {
+    font-family: $font-main;
+    background-color: $main;
+    color: $white;
+    font-weight: normal;
+
+    @include fsz($fsz-text-main, $lh-text-main);
+
+    @include mobile {
+        @include fsz($fsz-text-main-mob, $lh-text-main-mob);
+    }
+}
+
+.container {
+    padding: 0 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include mobile {
+        max-width: 360px;
+        padding: 0 20px;
+    }
+}
+
+a {
+    color: $white;
+    transition: color 0.2s ease-in;
+    &:hover {
+        color: $main;
+    }
+    text-decoration: none;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 25px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+h2 {
+    font-family: $font-accent;
+    @include fsz($fsz-h2, $lh-h2);
+}
+
+hr {
+    margin: 10px 0 0 0;
+    width: 930px;
+    height: 0px;
+    opacity: 0.4;
+    border: 1px solid $white;
+}
+
+.logo {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    @include mobile {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        margin-bottom: 48px;
+    }
+}
+
+.icon {
+    padding-bottom: 3px;
+}

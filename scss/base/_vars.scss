@@ -1,0 +1,42 @@
+$font-main: "TT Commons";
+$font-accent: "RedCollar";
+
+$main: #000000;
+$accent: #f51b1b;
+$white: #fff;
+
+$fsz-text-main: 20px;
+$lh-text-main: 24px;
+
+$fsz-text-main-mob: 16px;
+$lh-text-main-mob: 20px;
+
+$fsz-text2: 18px;
+$lh-text2: 24px;
+
+$fsz-text2-mob: 16px;
+$lh-text2-mob: 20px;
+
+$fsz-h1-mob: 20px;
+$lh-h1-mob: 24px;
+
+$fsz-h2: 16px;
+$lh-h2: 100%;
+
+$breakpoint_xs: 360px;
+
+@mixin flex($dir: row) {
+    display: flex;
+    flex-direction: $dir;
+}
+
+@mixin fsz($fsz, $lh) {
+    font-size: $fsz;
+    line-height: $lh;
+}
+
+@mixin mobile() {
+    @media (max-width: $breakpoint_xs) {
+        @content;
+    }
+}

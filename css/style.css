@@ -1,0 +1,423 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: TT Commons;
+  src: url(/fonts/TTCommons-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: RedCollar;
+  src: url(/fonts/Redcollar.woff2);
+}
+::-moz-selection {
+  background-color: #f51b1b;
+}
+::selection {
+  background-color: #f51b1b;
+}
+
+body {
+  font-family: "TT Commons";
+  background-color: #000000;
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+@media (max-width: 360px) {
+  body {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.container {
+  padding: 0 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (max-width: 360px) {
+  .container {
+    max-width: 360px;
+    padding: 0 20px;
+  }
+}
+
+a {
+  color: #fff;
+  transition: color 0.2s ease-in;
+  text-decoration: none;
+}
+a:hover {
+  color: #000000;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 25px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+h2 {
+  font-family: "RedCollar";
+  font-size: 16px;
+  line-height: 100%;
+}
+
+hr {
+  margin: 10px 0 0 0;
+  width: 930px;
+  height: 0px;
+  opacity: 0.4;
+  border: 1px solid #fff;
+}
+
+.logo {
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+}
+@media (max-width: 360px) {
+  .logo {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    margin-bottom: 48px;
+  }
+}
+
+.icon {
+  padding-bottom: 3px;
+}
+
+.resume__body {
+  padding-top: 18px;
+  position: relative;
+  padding-left: 31px;
+  width: 100%;
+}
+@media (max-width: 360px) {
+  .resume__body {
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+.resume__content {
+  display: flex;
+  position: relative;
+  padding-top: 40px;
+}
+@media (max-width: 360px) {
+  .resume__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.achiev {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 360px) {
+  .achiev {
+    padding-left: 0;
+  }
+}
+.achiev__text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 690px;
+  margin-bottom: 33px;
+  font-size: 18px;
+  line-height: 24px;
+}
+@media (max-width: 360px) {
+  .achiev__text {
+    max-width: 320px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.achiev__body {
+  border: 1px solid #fff;
+  min-height: 50vh;
+  margin-bottom: 49px;
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+}
+@media (max-width: 360px) {
+  .achiev__body {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.achiev__body__arrow-black {
+  position: absolute;
+  left: 57px;
+  top: -1px;
+}
+.achiev__body__lists {
+  padding: 48px 50px 0px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.achiev__body__lists :last-child {
+  border-bottom: none;
+}
+@media (max-width: 360px) {
+  .achiev__body__lists {
+    padding: 40px 15px 30px 15px;
+  }
+}
+.achiev__education, .achiev__jobs, .achiev__hard-skills {
+  display: grid;
+  grid-template-columns: 124px 1fr;
+  gap: 72px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+@media (max-width: 360px) {
+  .achiev__education, .achiev__jobs, .achiev__hard-skills {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+.achiev__education__items, .achiev__jobs__items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 360px) {
+  .achiev__education__items, .achiev__jobs__items {
+    padding: 0;
+  }
+}
+@media (max-width: 360px) {
+  .achiev__jobs__items {
+    padding: 0;
+  }
+}
+.achiev__education__item, .achiev__jobs__item {
+  display: flex;
+  flex-direction: row;
+}
+.achiev__education__item p ~ p, .achiev__jobs__item p ~ p {
+  opacity: 0.4;
+}
+@media (max-width: 360px) {
+  .achiev__education__item, .achiev__jobs__item {
+    padding: 0;
+  }
+}
+@media (max-width: 360px) {
+  .achiev__hard-skills {
+    padding: 0;
+  }
+}
+.achiev__hard-skills__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 360px) {
+  .achiev__hard-skills__items {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+.achiev__hard-skills__item-info-skills {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+@media (max-width: 360px) {
+  .achiev__hard-skills__item-info-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+.card {
+  display: flex;
+  position: relative;
+}
+@media (max-width: 360px) {
+  .card {
+    margin-top: 48px;
+    min-height: 612px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 360px) {
+  .card__age {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.card__contacts {
+  position: absolute;
+  padding-top: 326px;
+}
+.card__my-photo {
+  position: relative;
+}
+@media (max-width: 360px) {
+  .card__my-photo {
+    max-width: 320px;
+    height: 353px;
+  }
+}
+.card__glasses-photo {
+  position: absolute;
+  z-index: 2;
+  padding-left: 90px;
+  padding-top: 80px;
+  transform: rotate(8deg);
+}
+.card__arrow {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.card__background-red-fill {
+  position: relative;
+  width: 322px;
+  height: 454px;
+  background: #f51b1b;
+  border-radius: 24px 24px 0px 0px;
+}
+@media (max-width: 360px) {
+  .card__background-red-fill {
+    width: 320px;
+    height: 288px;
+  }
+}
+.card__background-red {
+  position: relative;
+}
+.card__items {
+  padding-top: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card__items a {
+  padding-left: 16px;
+}
+@media (max-width: 360px) {
+  .card__items a {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .card__items {
+    gap: 16px;
+    padding-top: 24px;
+  }
+}
+.card__items h1 {
+  font-family: "RedCollar";
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+@media (max-width: 360px) {
+  .card__items h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.card__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 20px;
+  padding-left: 24px;
+}
+.card__item--inline {
+  display: inline;
+  margin-bottom: 20px;
+}
+@media (max-width: 360px) {
+  .card__item--inline {
+    margin-bottom: 16px;
+  }
+}
